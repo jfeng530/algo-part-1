@@ -1,12 +1,15 @@
 public class Percolation {
 
   private int[][] matrix;
+  private int[][] open;
   // creates n-by-n grid, with all sites initially blocked
   public Percolation(int n) {
     matrix = new int[n][n];
+    open = new int[n][n];
     for (int i = 0; i < n; i++) {
       for (int j = 0; j < n; j++) {
-        matrix[i][j] = 0;
+        matrix[i][j] = 1;
+        open[i][j] = 0;
       }
     }
   }
@@ -38,7 +41,7 @@ public class Percolation {
 
   // does the system percolate?
   public boolean percolates() {
-    
+
   }
 
   // test client (optional)
